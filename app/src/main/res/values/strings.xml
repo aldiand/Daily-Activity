@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2016 The Android Open Source Project
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <!-- Name for the application [CHAR LIMIT=12] -->
+    <string name="app_name">Jadwals</string>
+
+    <!-- Title text for the empty view, which describes the empty dog house image [CHAR LIMIT=50] -->
+    <string name="empty_view_title_text">It\'s a bit lonely here…\nGet started by adding a jadwal</string>
+
+    <!-- Title for dialog to add a new jadwal [CHAR LIMIT=20] -->
+    <string name="editor_activity_title_new_jadwal">Add a Jadwal</string>
+
+    <!-- Title for dialog to edit an existing jadwal [CHAR LIMIT=20] -->
+    <string name="editor_activity_title_edit_jadwal">Edit Jadwal</string>
+
+    <!-- Label for dialog to save jadwal and leave editor [CHAR LIMIT=20] -->
+    <string name="action_save">Save</string>
+
+    <!-- Dialog message to ask the user to confirm deleting the selected jadwal [CHAR LIMIT=NONE] -->
+    <string name="delete_dialog_msg">Delete selected jadwal?</string>
+
+    <!-- Label for contextual menu option that deletes the current jadwal [CHAR LIMIT=20] -->
+    <string name="action_delete">Delete</string>
+
+    <!-- Label for contextual menu option that inserts fake jadwal data into the app [CHAR LIMIT=20] -->
+    <string name="action_edit">Edit</string>
+
+    <!-- Label for menu option that search jadwal data in the app [CHAR LIMIT=20] -->
+    <string name="action_search">Search</string>
+
+    <!-- Label for editor menu option to cancel jadwal and leave editor [CHAR LIMIT=20] -->
+    <string name="action_cancel">Cancel</string>
+
+    <!-- Label for toast message when a jadwal is clicked [CHAR LIMIT=20] -->
+    <string name="jadwal_clicked">%1$s clicked!</string>
+
+    <!-- Text hint for name field in the editor [CHAR LIMIT=30] -->
+    <string name="hint_jadwal_name">Name</string>
+
+    <!-- Text hint for breed field in the editor [CHAR LIMIT=30] -->
+    <string name="hint_jadwal_breed">Breed</string>
+    <string name="hint_jadwal_jam">Jam</string>
+    <string name="hint_jadwal_subject">Subject</string>
+</resources>
