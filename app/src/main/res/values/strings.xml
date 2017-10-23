@@ -12,7 +12,17 @@
 -->
 <resources>
     <!-- Name for the application [CHAR LIMIT=12] -->
-    <string name="app_name">Jadwals</string>
+    <string name="app_name">Daily Activity</string>
+
+	<string-array name="days_array">
+		<item>Senin</item>
+		<item>Selasa</item>
+		<item>Rabu</item>
+		<item>Kamis</item>
+		<item>Jumat</item>
+		<item>Sabtu</item>
+		<item>Minggu</item>
+	</string-array>
 
     <!-- Title text for the empty view, which describes the empty dog house image [CHAR LIMIT=50] -->
     <string name="empty_view_title_text">It\'s a bit lonely here…\nGet started by adding a jadwal</string>
@@ -51,4 +61,10 @@
     <string name="hint_jadwal_breed">Breed</string>
     <string name="hint_jadwal_jam">Jam</string>
     <string name="hint_jadwal_subject">Subject</string>
+
+
+	<string name="drawer_open">Open navigation drawer</string>
+	<string name="drawer_close">Close navigation drawer</string>
+	<string name="app_not_available">item not available</string>
+	<string name="action_websearch">Search</string>
 </resources>

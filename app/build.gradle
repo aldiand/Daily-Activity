@@ -24,10 +24,6 @@ dependencies {
     compile 'com.android.support:design:26.0.0-alpha1'
     compile 'com.android.support:recyclerview-v7:26.0.0-alpha1'
 
-    //TODO (1) download google-services.json from http://console.firebase.google.com/
-
-    //TODO (2) add Firebase Realtime Database dependency
-
     compile 'com.google.firebase:firebase-database:11.4.0'
 }
 

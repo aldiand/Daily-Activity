@@ -27,8 +27,6 @@ public class JadwalAdapter  extends RecyclerView.Adapter<JadwalAdapter.ViewHolde
     private ArrayList<String> mDataIds;
     private ArrayList<String> mSelectionIds;
 
-
-    //TODO (6) addChildEventListener for our real-time database in constructor
     JadwalAdapter(Context context, DatabaseReference mDatabase, View emptyView, OnClickHandler clickHandler) {
         mContext = context;
         mClickHandler = clickHandler;
@@ -73,7 +71,6 @@ public class JadwalAdapter  extends RecyclerView.Adapter<JadwalAdapter.ViewHolde
         mDatabase.addChildEventListener(childEventListener);
     }
 
-    //TODO (20) add method to handle empty data
     private void setEmptyView(){
         if(mData.size() == 0)
             mEmptyView.setVisibility(View.VISIBLE);
@@ -81,7 +78,6 @@ public class JadwalAdapter  extends RecyclerView.Adapter<JadwalAdapter.ViewHolde
             mEmptyView.setVisibility(View.GONE);
     }
 
-    //TODO (17) add method to get selection ids and get pet by id
     public ArrayList<String> getmSelectionIds(){
         return mSelectionIds;
     }
@@ -90,7 +86,6 @@ public class JadwalAdapter  extends RecyclerView.Adapter<JadwalAdapter.ViewHolde
         return mData.get(mDataIds.indexOf(jadwalId));
     }
 
-    //TODO (14) add method to toggle selection, get selection count and reset selection
     public void toggleSelection(String petId){
         if (mSelectionIds.contains(petId))
             mSelectionIds.remove(petId);
@@ -128,15 +123,12 @@ public class JadwalAdapter  extends RecyclerView.Adapter<JadwalAdapter.ViewHolde
         return mData.size();
     }
 
-    //TODO (10) create interface to handle click event
     interface OnClickHandler {
-        void onClick(Jadwal currentPet, String petId);
+        void onClick(Jadwal currentJadwal, String jadwalId);
 
-        //TODO (13) add method to handle long click event
         boolean onLongClick(Jadwal currentPet, String petId);
     }
 
-    //TODO (7) create inner class for ViewHolder
     class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener {
         final TextView mJam;
         final TextView mSubject;

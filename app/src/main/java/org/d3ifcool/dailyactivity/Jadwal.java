@@ -7,15 +7,23 @@ package org.d3ifcool.dailyactivity;
 public class Jadwal {
     private String mJam;
     private String mSubject;
-    private String mHari;
 
-    public String getHari() {
-        return mHari;
-    }
+	public static final String EXTRA_HARI = "extra_hari";
+	public static final String MINGGU = "minggu";
+	public static final String SENIN = "senin";
+	public static final String SELASA = "selasa";
+	public static final String RABU = "rabu";
+	public static final String KAMIS = "kamis";
+	public static final String JUMAT = "jumat";
+	public static final String SABTU = "sabtu";
 
-    public void setHari(String mHari) {
-        this.mHari = mHari;
-    }
+	public Jadwal(){
+
+	}
+	public Jadwal(String mJam, String mSubject) {
+		this.mSubject = mSubject;
+		this.mJam = mJam;
+	}
 
     public String getJam() {
         return mJam;

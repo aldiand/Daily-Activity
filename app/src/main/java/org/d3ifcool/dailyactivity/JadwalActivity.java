@@ -38,16 +38,15 @@ public class JadwalActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jadwal);
 
-        //TODO (9) setup RecyclerView's layout manager and adapter
+
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        mDatabase = FirebaseDatabase.getInstance().getReference().child("daftar");
+        mDatabase = FirebaseDatabase.getInstance().getReference().child(getIntent().getStringExtra(Jadwal.EXTRA_HARI));
         mAdapter = new JadwalAdapter(this, mDatabase, findViewById(R.id.empty_view), new JadwalAdapter.OnClickHandler() {
             @Override
-            public void onClick(JadwalAdapter currentJadwal, String jadwalId) {
-                //TODO (15) handle click when user is in selection mode
+            public void onClick(Jadwal currentJadwal, String jadwalId) {
 
                 if (mActionMode != null){
                     mAdapter.toggleSelection(jadwalId);
@@ -81,7 +80,6 @@ public class JadwalActivity extends AppCompatActivity {
         });
     }
 
-    //TODO (12) create ActionMode.Callback for contextual menu (edit & delete)
     private ActionMode.Callback mActionModeCallback = new ActionMode.Callback() {
         @Override
         public boolean onCreateActionMode(ActionMode mode, Menu menu) {
@@ -118,9 +116,6 @@ public class JadwalActivity extends AppCompatActivity {
     };
 
     private void addPet() {
-        //TODO (4) insert dummy data to our real-time database
-
-        //TODO (11) setup custom dialog to add a new pet
         View view = LayoutInflater.from(this).inflate(R.layout.dialog_editor, null, false);
         final EditText editJam = (EditText) view.findViewById(R.id.edit_jadwal_jam);
         final EditText editSubject = (EditText) view.findViewById(R.id.edit_jadwal_subject);
@@ -142,7 +137,7 @@ public class JadwalActivity extends AppCompatActivity {
     }
 
     private void editPet() {
-        //TODO (16) setup custom dialog to edit pet
+
         final String petId = mAdapter.getmSelectionIds().get(0);
         Jadwal curentJadwal = mAdapter.getJadwalById(petId);
 
@@ -169,7 +164,6 @@ public class JadwalActivity extends AppCompatActivity {
     }
 
     private void deletePet() {
-        //TODO (18) setup confirmation dialog to delete pet
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage(R.string.delete_dialog_msg).setPositiveButton(R.string.action_delete, new DialogInterface.OnClickListener() {
             @Override
@@ -190,7 +184,6 @@ public class JadwalActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        //getMenuInflater().inflate(R.menu.menu_catalog, menu);
         return true;
     }
 }

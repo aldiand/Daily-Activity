@@ -16,21 +16,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CatalogActivity">
+    tools:context=".JadwalActivity">
 
-    <!-- TODO (5) add RecyclerView to show pet list -->
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <!-- TODO (19) add TextView to show empty message -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="@string/empty_view_title_text"
-        android:drawableTop="@drawable/ic_empty_shelter"
         android:drawablePadding="8dp"
         android:gravity="center"
         android:id="@+id/empty_view"/>
@@ -42,5 +38,5 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_margin="@dimen/fab_margin"
-        android:src="@drawable/ic_add_pet"/>
+        android:src="@drawable/ic_add_circle_outline_black_24dp"/>
 </RelativeLayout>
