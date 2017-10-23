@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+	<Button
+		android:id="@+id/btn_minggu"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Minggu"/>
+	<Button
+		android:id="@+id/btn_senin"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Senin"/>
+	<Button
+		android:id="@+id/btn_selasa"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Selasa"/>
+	<Button
+		android:id="@+id/btn_rabu"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Rabu"/>
+	<Button
+		android:id="@+id/btn_kamis"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Kamis"/>
+	<Button
+		android:id="@+id/btn_jumat"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Jumat"/>
+	<Button
+		android:id="@+id/btn_sabtu"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Sabtu"/>
+
+</LinearLayout>
